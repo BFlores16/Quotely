@@ -12,6 +12,7 @@
 		A5AFF41E258172D60046BECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF41C258172D60046BECB /* Main.storyboard */; };
 		A5AFF420258172D80046BECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF41F258172D80046BECB /* Assets.xcassets */; };
 		A5AFF423258172D80046BECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF421258172D80046BECB /* LaunchScreen.storyboard */; };
+		A5AFF432258174130046BECB /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AFF431258174130046BECB /* QuoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A5AFF41F258172D80046BECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5AFF422258172D80046BECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AFF424258172D80046BECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AFF431258174130046BECB /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A5AFF42C258172E50046BECB /* View */,
 				A5AFF42D258172EF0046BECB /* Controller */,
 				A5AFF41F258172D80046BECB /* Assets.xcassets */,
+				A5AFF424258172D80046BECB /* Info.plist */,
 			);
 			path = Quotely;
 			sourceTree = "<group>";
@@ -82,6 +85,7 @@
 		A5AFF42D258172EF0046BECB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A5AFF431258174130046BECB /* QuoteTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,7 +95,6 @@
 			children = (
 				A5AFF416258172D60046BECB /* AppDelegate.swift */,
 				A5AFF418258172D60046BECB /* SceneDelegate.swift */,
-				A5AFF424258172D80046BECB /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5AFF417258172D60046BECB /* AppDelegate.swift in Sources */,
+				A5AFF432258174130046BECB /* QuoteTableViewController.swift in Sources */,
 				A5AFF419258172D60046BECB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
