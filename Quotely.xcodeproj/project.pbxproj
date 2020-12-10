@@ -13,6 +13,7 @@
 		A5AFF420258172D80046BECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF41F258172D80046BECB /* Assets.xcassets */; };
 		A5AFF423258172D80046BECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF421258172D80046BECB /* LaunchScreen.storyboard */; };
 		A5AFF432258174130046BECB /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AFF431258174130046BECB /* QuoteTableViewController.swift */; };
+		A5AFF4392581B67E0046BECB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AFF4382581B67E0046BECB /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A5AFF422258172D80046BECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AFF424258172D80046BECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5AFF431258174130046BECB /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		A5AFF4382581B67E0046BECB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AFF4392581B67E0046BECB /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				A5AFF415258172D60046BECB /* Quotely */,
 				A5AFF414258172D60046BECB /* Products */,
+				A5AFF4372581B67E0046BECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +101,14 @@
 				A5AFF418258172D60046BECB /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5AFF4372581B67E0046BECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5AFF4382581B67E0046BECB /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
