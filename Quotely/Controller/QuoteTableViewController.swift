@@ -6,8 +6,11 @@
 //  product ID: com.BrandoFlores.Quotely.PremiumQuotes
 
 import UIKit
+import StoreKit
 
-class QuoteTableViewController: UITableViewController {
+class QuoteTableViewController: UITableViewController, SKPaymentTransactionObserver {
+        
+    let productID = "com.BrandoFlores.Quotely.PremiumQuotes"
     
     var quotesToShow = [
         "Our greatest glory is not in never falling, but in rising every time we fall. — Confucius",
@@ -30,6 +33,8 @@ class QuoteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add our QuoteTableViewController as the delegate for SKPaymenTransactionObserver
+        SKPaymentQueue.default().add(self)
         
         
     }
@@ -69,7 +74,28 @@ class QuoteTableViewController: UITableViewController {
     
     //MARK: - In-App purchase functions
     func buyPremiumQuotes() {
-        
+        if SKPaymentQueue.canMakePayments() {
+            // In-App purchase request
+            let paymentRequest = SKMutablePayment()
+            paymentRequest.productIdentifier = productID
+            SKPaymentQueue.default().add(paymentRequest)
+        }
+        else {
+            print("User unable to make purchases")
+        }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                // User payment successful
+                print("Payment successful")
+            }
+            else if transaction.transactionState == .failed{
+                // Payment failed
+                print("Payment failed")
+            }
+        }
     }
     
     @IBAction func restoreButtonPressed(_ sender: UIBarButtonItem) {
