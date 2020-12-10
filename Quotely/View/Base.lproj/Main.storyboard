@@ -33,6 +33,9 @@
                     <navigationItem key="navigationItem" title="Quotely" id="K4r-8W-IcG">
                         <barButtonItem key="rightBarButtonItem" title="Restore" id="JAY-1T-aKi">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="restoreButtonPressed:" destination="rGx-Y1-Kxp" id="IN0-0d-i4h"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
