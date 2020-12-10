@@ -85,15 +85,26 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         }
     }
     
+    // Delegate function listening for user payment
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             if transaction.transactionState == .purchased {
                 // User payment successful
                 print("Payment successful")
+                
+                // terminate the transaction
+                SKPaymentQueue.default().finishTransaction(transaction)
             }
             else if transaction.transactionState == .failed{
                 // Payment failed
                 print("Payment failed")
+                
+                if let error = transaction.error {
+                    let errorDescription = error.localizedDescription
+                    print("Transaction failed due to error: \(errorDescription)")
+                }
+                
+                SKPaymentQueue.default().finishTransaction(transaction)
             }
         }
     }
